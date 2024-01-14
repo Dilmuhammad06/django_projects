@@ -1,0 +1,3 @@
+Projectni ochish uchun venv nomli python enviorment yarating
+
+venv ishida faqat pip install django bo'lishi yetarli

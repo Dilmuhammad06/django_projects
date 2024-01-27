@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<h1>This is index file</h1>
+
+{% for name,value in names.items %}
+<ul>
+    <li><a href="/myapp/info/{{value.user_id}}">{{name}}</a></li>
+</ul>
+{% endfor %}
+
+
+
+{% endblock content %}

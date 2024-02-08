@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li class="active"><a href="/">All</a></li>
+      <li><a class="drop" href="#">Categories</a>
+        <ul>
+          {% for c in cat %}
+          <li><a href="{% url 'category_show' c.slug %}">{{c.name}}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li><a class="drop" href="#">Languages</a>
+        <ul>
+            {% for l in lang %}
+            <li><a href="{% url 'language_show' l.slug %}">{{l.name}}</a></li>
+            {% endfor %}
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>

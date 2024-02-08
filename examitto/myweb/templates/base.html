@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+Template Name: Pedggie
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>Pedggie</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+
+<style>
+  /* Additional CSS */
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly */
+}
+
+.book-post {
+  width: calc(33.33% - 20px); /* Adjust width to fit three elements in a row */
+  margin-bottom: 40px; /* Add margin bottom to create space between rows */
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-post article {
+  display: block;
+}
+
+/* Style for the book post content */
+.book-post figure {
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Set a fixed height for the figure */
+}
+
+.book-post figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire figure */
+  transition: transform 0.3s ease;
+}
+
+.book-post:hover img {
+  transform: scale(1.1);
+}
+
+.book-post figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-post:hover figcaption {
+  opacity: 1;
+}
+
+.txtwrap {
+  padding: 20px;
+}
+
+.txtwrap .heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color:rgb(21, 21, 21)
+}
+
+.txtwrap p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  color:black
+}
+
+
+</style>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace inline pushright">
+        <li><i class="fa fa-phone"></i> +998 94 139 07 72</li>
+        <li><i class="fa fa-envelope-o"></i> dizenstudios@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="index.html">Book Paradise</a></h1>
+    </div>
+
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+{% include 'nav_bar.html' %}
+
+
+{% block content %}
+
+
+{% endblock content %}
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">DizenBook</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+</body>
+</html>
